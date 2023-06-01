@@ -3,7 +3,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="flex w-full bg-[#000300] py-16 px-4 max-w-[1240px] mx-auto grid md:grid-cols-2">
+    <div className="w-full bg-[#000300] py-16 px-4 max-w-[1240px] mx-auto grid md:grid-cols-2">
       {/* Image */}
       <div className="bg-white w-80 h-80 rounded-full flex items-center justify-center mx-auto">
       <img
@@ -20,7 +20,7 @@ const About = () => {
           Gaurav, a self-taught front-end developer, embraces continuous
           learning and exploration. With a passion for web development, he has
           honed his skills through self-guided projects and experimentation.
-          Gaurav's adaptability and commitment to excellence drive his journey
+           adaptability and commitment to excellence drive his journey
           towards becoming a proficient and sought-after developer. Gaurav, a
           self-taught front-end developer, embraces continuous learning and
           exploration. With a passion for web development, he has honed his
