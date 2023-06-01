@@ -13,7 +13,7 @@ const Contact = () => {
       </div>
 
       {/* Cards */}
-      <div className="flex justify-center items-center mb-8 w-[60%] md:w-[30%] sm:w-[60%] ">
+      <div className="flex justify-center items-center mb-8 w-[80%] md:w-[30%] sm:w-[60%] ">
 
         {/* Card 1 */}
         <div className="bg-[#1F1F1F] rounded">
