@@ -19,7 +19,7 @@ const Contact = () => {
         <div className="bg-[#1F1F1F] rounded">
           {/* image */}
           <div className=" h-40">
-            <Image
+            <img
               src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg"
               alt="/"
               className="object-cover w-full h-full rounded"
