@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import Image from "next/image";
 
 const Contact = () => {
   return (
@@ -18,7 +19,7 @@ const Contact = () => {
         <div className="bg-[#1F1F1F] rounded">
           {/* image */}
           <div className=" h-40">
-            <img
+            <Image
               src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg"
               alt="/"
               className="object-cover w-full h-full rounded"
@@ -30,7 +31,7 @@ const Contact = () => {
           <p className="text-[#A7A6A6] px-4">Front-End Developer</p>
           <p className="text-[#A7A6A6] px-4 mt-5">
             I am available for Freelance and full time positions, contact me and{" "}
-            <span className="text-[#00df9a] ">Let's Talk</span>
+            <span className="text-[#00df9a] ">Lets Talk</span>
           </p>
 
           <div>

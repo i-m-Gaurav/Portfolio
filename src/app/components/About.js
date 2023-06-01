@@ -1,12 +1,13 @@
 import React from "react";
 // import Image from '../assets/run.png'
+import Image from "next/image";
 
 const About = () => {
   return (
     <div className="w-full bg-[#000300] py-16 px-4 max-w-[1240px] mx-auto grid md:grid-cols-2">
       {/* Image */}
       <div className="bg-white w-80 h-80 rounded-full flex items-center justify-center mx-auto">
-      <img
+      <Image
         className="rounded-full"
         src="https://thumbs.dreamstime.com/b/man-profile-cartoon-smiling-vector-illustration-graphic-design-135443492.jpg"
         alt="Profile"
