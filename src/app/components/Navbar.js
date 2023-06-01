@@ -21,7 +21,7 @@ const Navbar = () => {
             <div onClick={handleNav} className='block md:hidden cursor-pointer '>
                 {!nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
             </div>
-            <div  className={!nav ? 'left-0 top-0 fixed w-[60%] h-full border-r border-r-gray-900 bg-[#0003009e] backdrop-blur ease-in-out duration-500 '  : 'left-[-100%] top-0 fixed w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500 '}>
+            <div  className={!nav ? 'left-0 top-0 fixed w-[60%] h-[1000px] border-r border-r-gray-900 bg-[#0003009e] backdrop-blur ease-in-out duration-500 '  : 'left-[-100%] top-0 fixed w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500 '}>
             <h1 className='w-full text-3xl font-bold m-7 text-[#00df9a]' >GAURAV.</h1>
             <ul className='uppercase m-4'>
                 <li className='p-4 border-b border-b-gray-700'>Home</li>
