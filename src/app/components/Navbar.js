@@ -76,7 +76,6 @@ const Navbar = () => {
             About
           </ScrollLink>{" "}
           </li>
-          <li className="p-4 border-b border-b-gray-700">Contact</li>
           <li className="p-4">
           <ScrollLink to="contact" smooth={true} duration = {500} offset={-70}>
             Contact
