@@ -20,12 +20,16 @@ const HomePage = () => {
       </section>{" "}
       <Skills />
       <Services />
+      <section id="projects">
       <Projects />
-      <section id="contact">
+
+        {/* About component contents */}
+      </section>{" "}      <section id="contact">
       <Contact />
 
         {/* About component contents */}
       </section>{" "}
+      
       <Footer />
     </>
   );
