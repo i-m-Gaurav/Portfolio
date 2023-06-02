@@ -66,7 +66,11 @@ const Navbar = () => {
         </h1>
         <ul className="uppercase m-4">
           <li className="p-4 border-b border-b-gray-700">Home</li>
-          <li className="p-4 border-b border-b-gray-700">Download CV</li>
+          <li className="p-4 border-b border-b-gray-700">
+          <Link href="/static/resume.pdf" download>
+        Resume
+  </Link>
+          </li>
           <li className="p-4 border-b border-b-gray-700">
           <ScrollLink to="about" smooth={true} duration={500} offset={-70}>
             About
