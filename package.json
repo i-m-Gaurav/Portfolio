@@ -8,8 +8,6 @@
     "start": "next start",
     "lint": "next lint",
     "deploy": "next build && next export"
-
-
   },
   "dependencies": {
     "eslint": "8.41.0",
@@ -17,7 +15,8 @@
     "next": "13.4.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.9.0"
+    "react-icons": "^4.9.0",
+    "react-scroll": "^1.8.9"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
