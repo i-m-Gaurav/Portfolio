@@ -1,7 +1,7 @@
+import "../styles/global.css";
 import Head from "next/head";
 import Navbar from "@/app/components/Navbar";
 import Hero from "@/app/components/Hero";
-import "../styles/global.css";
 import About from "@/app/components/About";
 import Skills from "@/app/components/Skills";
 import Services from "@/app/components/Services";
@@ -21,15 +21,15 @@ const HomePage = () => {
       <Skills />
       <Services />
       <section id="projects">
-      <Projects />
-
-        {/* About component contents */}
-      </section>{" "}      <section id="contact">
-      <Contact />
+        <Projects />
 
         {/* About component contents */}
       </section>{" "}
-      
+      <section id="contact">
+        <Contact />
+
+        {/* About component contents */}
+      </section>{" "}
       <Footer />
     </>
   );

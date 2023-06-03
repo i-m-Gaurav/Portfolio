@@ -5,6 +5,7 @@ import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 const Navbar = () => {
   const [nav, setNav] = useState(true);
+  const [scrollBg, setScrollBg] = useState(false);
   const navRef = useRef(null);
 
   const handleNav = () => {
@@ -25,30 +26,61 @@ const Navbar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    function handleScroll() {
+      const isTop = window.scrollY < 100;
+      if (isTop !== scrollBg) {
+        setScrollBg(isTop);
+      }
+    }
+
+    document.addEventListener("scroll", handleScroll);
+
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrollBg]);
+
   return (
     <div
       ref={navRef}
-      className="text-white flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4"
+      className={`text-white sticky top-0 flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 ${
+        nav ? (scrollBg ? "fixed w-full top-0 z-50 bg-[#000300] ease-in-out duration-500" : "bg-[#0e0e0e] drop-shadow h-16 top-2 ease-in-out duration-300 ") : "fixed w-full top-0 z-50 bg-[#000300]"
+      }`}
     >
       <h1 className="w-full text-3xl font-bold text-[#00df9a] cursor-pointer">
         GAURAV.
       </h1>
       <ul className="hidden md:flex">
-        <li className="p-4">Home</li>
-        <li className="p-4">
-        <Link href="/static/resume.pdf" download>
-        Resume
-  </Link>
+        <li className="p-4 inline-block border-b-2 border-transparent hover:border-[#00df9a] transition duration-300 ease-in-out">
+          Home
         </li>
-        <li className="p-4">
-          <ScrollLink className="cursor-pointer" to="about" smooth={true} duration={500} offset={-70}>
+        <li className="p-4 inline-block border-b-2 border-transparent hover:border-[#00df9a] transition duration-300 ease-in-out">
+          <Link href="/static/resume.pdf" download>
+            Resume
+          </Link>
+        </li>
+        <li className="p-4 inline-block border-b-2 border-transparent hover:border-[#00df9a] transition duration-300 ease-in-out">
+          <ScrollLink
+            className="cursor-pointer"
+            to="about"
+            smooth={true}
+            duration={500}
+            offset={-70}
+          >
             About
           </ScrollLink>{" "}
         </li>
-        <li className="p-4">
-            <ScrollLink className="cursor-pointer" to="contact" smooth={true} duration = {500} offset={-70}>
+        <li className="p-4 inline-block border-b-2 border-transparent hover:border-[#00df9a] transition duration-300 ease-in-out">
+          <ScrollLink
+            className="cursor-pointer"
+            to="contact"
+            smooth={true}
+            duration={500}
+            offset={-70}
+          >
             Contact
-            </ScrollLink>
+          </ScrollLink>
         </li>
       </ul>
       <div onClick={handleNav} className="block md:hidden cursor-pointer">
@@ -67,18 +99,28 @@ const Navbar = () => {
         <ul className="uppercase m-4">
           <li className="p-4 border-b border-b-gray-700">Home</li>
           <li className="p-4 border-b border-b-gray-700">
-             <Link href="/static/resume.pdf" download>
-        Resume
-  </Link>
+            <Link href="/static/resume.pdf" download>
+              Resume
+            </Link>
           </li>
           <li className="p-4 border-b border-b-gray-700">
-          <ScrollLink to="about" smooth={true} duration={500} offset={-70}>
-            About
-          </ScrollLink>{" "}
+            <ScrollLink
+              to="about"
+              smooth={true}
+              duration={500}
+              offset={-70}
+            >
+              About
+            </ScrollLink>{" "}
           </li>
           <li className="p-4">
-          <ScrollLink to="contact" smooth={true} duration = {500} offset={-70}>
-            Contact
+            <ScrollLink
+              to="contact"
+              smooth={true}
+              duration={500}
+              offset={-70}
+            >
+              Contact
             </ScrollLink>
           </li>
         </ul>
