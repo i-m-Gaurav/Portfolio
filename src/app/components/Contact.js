@@ -130,7 +130,10 @@ const Contact = () => {
                   Name
                 </label>
                 <input
-                  value={name}
+required
+
+
+                 value={name}
                   type="text"
                   id="name"
                   name="name"
@@ -144,6 +147,7 @@ const Contact = () => {
                   Phone
                 </label>
                 <input
+required
                   value={phone}
                   type="tel"
                   id="phone"
@@ -159,6 +163,7 @@ const Contact = () => {
                 Email
               </label>
               <input
+required
                 value={email}
                 type="email"
                 id="email"
@@ -187,6 +192,7 @@ const Contact = () => {
                 Message
               </label>
               <textarea
+required
                 value={message}
                 id="message"
                 name="message"
