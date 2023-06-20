@@ -1,11 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Link from "next/link";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
   const [nav, setNav] = useState(true);
-  const [scrollBg, setScrollBg] = useState(false);
   const navRef = useRef(null);
 
   const handleNav = () => {
@@ -26,28 +25,8 @@ const Navbar = () => {
     };
   }, []);
 
-  useEffect(() => {
-    function handleScroll() {
-      const isTop = window.scrollY < 100;
-      if (isTop !== scrollBg) {
-        setScrollBg(isTop);
-      }
-    }
-
-    document.addEventListener("scroll", handleScroll);
-
-    return () => {
-      document.removeEventListener("scroll", handleScroll);
-    };
-  }, [scrollBg]);
-
   return (
-    <div
-      ref={navRef}
-      className={`text-white sticky top-0 flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 ${
-        nav ? (scrollBg ? "fixed w-full top-0 z-50 bg-[#000300] ease-in-out duration-500" : "bg-[#0e0e0e] drop-shadow h-16 top-2 ease-in-out duration-300 ") : "fixed w-full top-0 z-50 bg-[#000300]"
-      }`}
-    >
+    <div className="text-white flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4">
       <h1 className="w-full text-3xl font-bold text-[#00df9a] cursor-pointer">
         GAURAV.
       </h1>
@@ -69,7 +48,7 @@ const Navbar = () => {
             offset={-70}
           >
             About
-          </ScrollLink>{" "}
+          </ScrollLink>
         </li>
         <li className="p-4 inline-block border-b-2 border-transparent hover:border-[#00df9a] transition duration-300 ease-in-out">
           <ScrollLink
@@ -104,22 +83,12 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="p-4 border-b border-b-gray-700">
-            <ScrollLink
-              to="about"
-              smooth={true}
-              duration={500}
-              offset={-70}
-            >
+            <ScrollLink to="about" smooth={true} duration={500} offset={-70}>
               About
-            </ScrollLink>{" "}
+            </ScrollLink>
           </li>
           <li className="p-4">
-            <ScrollLink
-              to="contact"
-              smooth={true}
-              duration={500}
-              offset={-70}
-            >
+            <ScrollLink to="contact" smooth={true} duration={500} offset={-70}>
               Contact
             </ScrollLink>
           </li>
