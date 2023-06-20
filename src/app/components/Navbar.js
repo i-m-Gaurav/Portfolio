@@ -35,7 +35,7 @@ const Navbar = () => {
           Home
         </li>
         <li className="p-4 inline-block border-b-2 border-transparent hover:border-[#00df9a] transition duration-300 ease-in-out">
-          <Link href="/static/resume.pdf" download>
+          <Link href="/static/GauravResume.pdf" download>
             Resume
           </Link>
         </li>
@@ -78,7 +78,7 @@ const Navbar = () => {
         <ul className="uppercase m-4">
           <li className="p-4 border-b border-b-gray-700">Home</li>
           <li className="p-4 border-b border-b-gray-700">
-            <Link href="/static/Gaurav Resume.pdf" download>
+            <Link href="/static/GauravResume.pdf" download>
               Resume
             </Link>
           </li>
