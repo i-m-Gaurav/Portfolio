@@ -78,7 +78,7 @@ const Navbar = () => {
         <ul className="uppercase m-4">
           <li className="p-4 border-b border-b-gray-700">Home</li>
           <li className="p-4 border-b border-b-gray-700">
-            <Link href="/static/GauravResume.pdf" download>
+          <Link href="/static/GauravCV.pdf" download>
               Resume
             </Link>
           </li>
