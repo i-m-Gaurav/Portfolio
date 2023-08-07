@@ -1,4 +1,6 @@
 import React from "react";
+import { FaGithub } from "react-icons/fa";
+import { RiPlayFill } from "react-icons/ri";
 
 const Projects = () => {
   return (
@@ -9,13 +11,33 @@ const Projects = () => {
       </div>
 
       {/* Cards */}
+
       <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-2">
         {/* Card 1 */}
-        <div className="bg-[#1F1F1F]">
-          <div className=" h-96 bg-red-500 overflow-hidden">
-            <img src="https://help.nflxext.com/0af6ce3e-b27a-4722-a5f0-e32af4df3045_what_is_netflix_5_en.png" alt="Project 1" className="object-cover w-full h-full" />
-          </div>
-        </div>
+        <div className="bg-[#1F1F1F] p-6 rounded-lg shadow-lg">
+      <div className="mb-4">
+        <h1 className="text-white mt-5 text-4xl font-semibold">DailyBlog</h1>
+        <p className="text-white mt-4">An intuitive web application that empowers users to craft and explore posts shared by the community. Seamlessly create, publish, and read posts without the need for authentication. Your posts are stored securely in the database for future reference.</p>
+      </div>
+      <div className="flex flex-col justify-between h-32  ">
+      <div className="flex flex-wrap gap-2">
+        <button className="bg-[#00df9a] text-black px-3 py-1 rounded-full text-sm focus:outline-none">HTML</button>
+        <button className="bg-[#00df9a] text-black px-3 py-1 rounded-full text-sm focus:outline-none">CSS</button>
+        <button className="bg-[#00df9a] text-black px-3 py-1 rounded-full text-sm focus:outline-none">Javascript</button>
+        <button className="bg-[#00df9a] text-black px-3 py-1 rounded-full text-sm focus:outline-none">MongoDB</button>
+        <button className="bg-[#00df9a] text-black px-3 py-1 rounded-full text-sm focus:outline-none">ExpressJS</button>
+      </div>
+      <div className="flex justify-end mt-4">
+        <a href="https://github.com/your-username/your-repo" className="text-white mr-5">
+          <FaGithub size={32} />
+        </a>
+        <button className="bg-[#00df9a] text-black h-8 w-38 px-6 py-2 rounded-full text-sm focus:outline-none">
+           Try It
+        </button>
+      </div>
+      </div>
+
+    </div>
 
         {/* Card 2 */}
         <div className="bg-[#1F1F1F]">
