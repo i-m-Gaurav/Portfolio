@@ -16,7 +16,7 @@ useEffect(() => {
 
   return (
     <div className='text-white '>
-      <div className='max-w-[800px mt-[96px] mx-auto text-center'>
+      <div className='max-w-[800px] mt-[-9px] w-full min-h-screen mx-auto text-center flex flex-col justify-center'>
 
       <motion.div 
     initial={{ y: 20, opacity: 0 }}
@@ -39,7 +39,7 @@ useEffect(() => {
     animate={animate ? { y: 0, opacity: 1 } : ''}
     transition={{ duration: 0.8,delay:0.5 }}>
 
-<button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mt-48 mb-0 mx-auto py-3 text-black'>
+<button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mt-52 mb-0 mx-auto py-3 text-black'>
           <ScrollLink to="projects" smooth={true} duration={500} offset={-70}>
             See My Work
           </ScrollLink>  
