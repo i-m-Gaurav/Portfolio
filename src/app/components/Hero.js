@@ -28,7 +28,7 @@ useEffect(() => {
           <br/>I am <span className='text-[#00df9a]'>Gaurav</span>
         </h1>
 
-        <p className='md:text-2xl sm:text-xl text-lg font-semibold py-2 mt-10'>
+        <p className='md:text-xl sm:text-xl text-lg font-semibold py-2 mt-10'>
           Bridging UI/UX Design and Front-End Development <br/> to Craft Seamless Digital Experiences
         </p>
        

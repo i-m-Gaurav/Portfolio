@@ -63,7 +63,7 @@ const Skills = () => {
     <div className="text-white py-16 px-4" ref={skillSectionRef}>
       <div className="max-w-[1240px] mx-auto">
         <h2 className="text-5xl font-bold text-center text-[#00df9a]">My Skills</h2>
-        <div className="grid grid-cols-5 gap-8 mt-24">
+        <div className="grid grid-cols-3 md:grid-cols-4 sm:grid-cols-3 lg:grid-cols-5 gap-8 mt-24">
           {skills.map((skill, index) => (
             <div key={skill.name} className="text-center">
               <div className="relative w-12 h-12 mx-auto">
