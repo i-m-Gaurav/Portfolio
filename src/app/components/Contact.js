@@ -59,9 +59,12 @@ const Contact = () => {
           {/* Avatar Card */}
           <div className="bg-[#2a2a2a] shadow m-10 p-4 rounded-lg flex flex-col h-full">
 
-    <Image
-      src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg"  
-      alt="Gaurav Kumar"
+    
+     <Image
+      src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg"
+      width={500}
+      height={500}
+      alt="Picture of the author"
       className="w-32 h-32 rounded-full mx-auto"
     />
 
