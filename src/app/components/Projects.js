@@ -1,6 +1,5 @@
 import React from "react";
-import { FaGithub } from "react-icons/fa";
-import { RiPlayFill } from "react-icons/ri";
+
 import ProjectCard from "./Cards";
 
 const Projects = () => {

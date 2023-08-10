@@ -1,5 +1,4 @@
 import React from "react";
-import { RiCopyrightLine } from "react-icons/ri";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
