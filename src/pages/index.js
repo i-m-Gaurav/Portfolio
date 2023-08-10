@@ -15,7 +15,7 @@ const HomePage = () => {
       <Navbar />
       <Hero />
       <section id="about">
-        <About />
+        {/* <About /> */}
         {/* About component contents */}
       </section>{" "}
       <Skills />

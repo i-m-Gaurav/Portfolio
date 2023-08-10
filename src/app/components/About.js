@@ -1,35 +1,47 @@
-import React from "react";
-// import Image from '../assets/run.png'
-import Image from "next/image";
+import { motion } from 'framer-motion'
 
-const About = () => {
+export default function About() {
+
   return (
-    <div className="w-full bg-[#000300] py-16 px-4 max-w-[1240px] mx-auto grid md:grid-cols-2">
-      {/* Image */}
-      <div className="bg-white w-80 h-80 rounded-full flex items-center justify-center mx-auto">
-      <img
-        className="rounded-full"
-        src="https://thumbs.dreamstime.com/b/man-profile-cartoon-smiling-vector-illustration-graphic-design-135443492.jpg"
-        alt="Profile"
-        style={{ width: '80%', height: '80%', objectFit: 'cover' }}
-      />
-    </div>
-      {/* Text */}
-      <div className="px-10">
-        <h1 className="text-[#00df9a] font-bold mt-8 text-5xl">About me</h1>
-        <p className="text-white mt-5">
-          Gaurav, a self-taught front-end developer, embraces continuous
-          learning and exploration. With a passion for web development, he has
-          honed his skills through self-guided projects and experimentation.
-           adaptability and commitment to excellence drive his journey
-          towards becoming a proficient and sought-after developer. Gaurav, a
-          self-taught front-end developer, embraces continuous learning and
-          exploration. With a passion for web development, he has honed his
-          skills through self-guided projects and experimentation. 
-        </p>
-      </div>
-    </div>
-  );
-};
+    <motion.div 
+      className="h-screen flex flex-col items-center justify-between p-10 text-center md:text-left md:flex-row max-w-7xl mx-auto"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+    >
 
-export default About;
+      <div>
+        <h1 className="absolute top-24 uppercase tracking-[15px] text-gray-500 text-2xl">
+          About
+        </h1>
+
+        <motion.div
+          initial={{ x: -200, opacity: 0 }}
+          transition={{ duration: 1.2 }}
+          whileInView={{ x: 0, opacity: 1 }}
+        >
+          <h2 className="text-5xl mb-4 font-semibold">
+            Hey There, I'm <span className="text-[#00df9a]">John Doe</span>  
+          </h2>
+          <h3 className="text-2xl mb-4">
+            I live for beautiful designs and enjoy bringing ideas to life with code.
+          </h3>
+        </motion.div>
+
+        <motion.p
+          initial={{ x: 200, opacity: 0 }} 
+          transition={{ duration: 1.2 }}
+          whileInView={{ x: 0, opacity: 1 }}
+        >
+          I have a passion for front-end development and creating intuitive, dynamic user experiences. When I'm not coding, you can find me playing guitar, reading, or exploring the outdoors. Ready to build something great? Let's connect!
+        </motion.p>
+      </div>
+      
+      <div className="relative mt-16 md:mt-0">
+        {/* e.g. social icons */}
+      </div>
+
+    </motion.div>
+  )
+
+}
