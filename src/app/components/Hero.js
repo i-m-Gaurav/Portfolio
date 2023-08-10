@@ -30,14 +30,14 @@ useEffect(() => {
 
         <p className='md:text-2xl sm:text-xl text-lg font-semibold py-2 mt-10'>
           Bridging UI/UX Design and Front-End Development <br/> to Craft Seamless Digital Experiences
-        </p>h
+        </p>
        
   
   </motion.div>
   <motion.div 
     initial={{ y: 20, opacity: 0 }}
     animate={animate ? { y: 0, opacity: 1 } : ''}
-    transition={{ duration: 0.8,delay:1 }}>
+    transition={{ duration: 0.8,delay:0.5 }}>
 
 <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mt-52 mb-0 mx-auto py-3 text-black'>
           <ScrollLink to="projects" smooth={true} duration={500} offset={-70}>
