@@ -2,7 +2,6 @@ import "../styles/global.css";
 import Head from "next/head";
 import Navbar from "@/app/components/Navbar";
 import Hero from "@/app/components/Hero";
-import About from "@/app/components/About";
 import Skills from "@/app/components/Skills";
 import Services from "@/app/components/Services";
 import Projects from "@/app/components/Projects";
