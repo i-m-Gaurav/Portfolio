@@ -16,7 +16,7 @@ useEffect(() => {
 
   return (
     <div className='text-white '>
-      <div className='max-w-[800px] mt-[-9px] w-full min-h-screen mx-auto text-center flex flex-col justify-center'>
+      <div className='max-w-[800px] mt-[-39px] w-full min-h-screen mx-auto text-center flex flex-col justify-center'>
 
       <motion.div 
     initial={{ y: 20, opacity: 0 }}
