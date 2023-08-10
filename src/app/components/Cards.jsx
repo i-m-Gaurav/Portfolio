@@ -1,7 +1,8 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa"; 
+import { Link } from "react-scroll";
 
-const ProjectCard = ({ title, technologies, description, githubLink }) => {
+const ProjectCard = ({ title, technologies, description, githubLink,projectLink }) => {
   return (
     <div className="bg-[#2a2a2a] p-6 rounded-lg shadow-lg relative">
       <div className="mb-4">
@@ -30,8 +31,12 @@ const ProjectCard = ({ title, technologies, description, githubLink }) => {
             <FaGithub size={30} />
           </a>
 
+
           <button className="bg-[#00df9a] text-black px-4 py-2 rounded-full text-xs focus:outline-none">
-            Try It
+            <a href={projectLink} target="_blank"> 
+            Try it
+            </a>
+           
           </button>
         </div>
       </div>

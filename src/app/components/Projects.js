@@ -19,7 +19,8 @@ const Projects = () => {
           title="DailyBlog"
           technologies={["HTML", "CSS", "Javascript", "MongoDB", "ExpressJS"]}
           description="An intuitive web application that empowers users to craft and explore posts shared by the community. Seamlessly create, publish, and read posts without the need for authentication. Your posts are stored securely in the database for future reference."
-          githubLink="https://github.com/your-username/your-repo"
+          githubLink="https://github.com/i-m-Gaurav/Blog/tree/master"
+          projectLink="https://daily-blog-xhek.onrender.com/"
         />
 
 
@@ -28,7 +29,8 @@ const Projects = () => {
           title="Cosmodrome"
           technologies={["HTML", "CSS", "Javascript"]}
           description="Cosmodrome is a project that utilizes the NASA open API to display publicly available data from NASA. Specifically, it focuses on providing a collection of Mars rover images from all three rovers."
-          githubLink="https://github.com/your-username/your-repo"
+          githubLink="https://github.com/i-m-Gaurav/mars.github.io"
+          projectLink="https://gauravcodes.me/mars.github.io/"
         />
 
        
