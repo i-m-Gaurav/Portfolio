@@ -75,7 +75,7 @@ const Contact = () => {
 
       <p className="text-[#ceced0] mt-3 ">
          I am available for full time opportunities and 
-         <br/>freelance work. Let's talk!
+         <br/>freelance work. 
       </p>
 
     </div>
