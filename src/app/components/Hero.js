@@ -23,12 +23,12 @@ useEffect(() => {
     animate={animate ? { y: 0, opacity: 1 } : ''}
     transition={{ duration: 0.7 }}>
 
-<h1 className='md:text-7xl sm:text-6xl text-4xl font-bold py-4'>
+<h1 className=' text-5xl md:text-7xl sm:text-6xl font-bold py-4'>
           Hi there,
           <br/>I am <span className='text-[#00df9a]'>Gaurav</span>
         </h1>
 
-        <p className='md:text-xl sm:text-xl text-lg font-semibold py-2 mt-10'>
+        <p className=' text-xs md:text-2xl sm:text-xl text-lg font-semibold py-2 mt-10'>
           Bridging UI/UX Design and Front-End Development <br/> to Craft Seamless Digital Experiences
         </p>
        
