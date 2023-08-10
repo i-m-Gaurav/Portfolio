@@ -30,7 +30,7 @@ useEffect(() => {
 
         <p className='md:text-2xl sm:text-xl text-lg font-semibold py-2 mt-10'>
           Bridging UI/UX Design and Front-End Development <br/> to Craft Seamless Digital Experiences
-        </p>
+        </p>h
        
   
   </motion.div>
