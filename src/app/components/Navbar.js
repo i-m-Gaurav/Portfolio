@@ -47,7 +47,7 @@ const Navbar = () => {
             duration={500}
             offset={-70}
           >
-            About
+            Skills
           </ScrollLink>
         </li>
         <li className="p-4 inline-block border-b-2 border-transparent hover:border-[#00df9a] transition duration-300 ease-in-out">
@@ -68,7 +68,7 @@ const Navbar = () => {
       <div
         className={
           !nav
-            ? "left-0 top-0 fixed w-[60%] h-[1000px] border-r border-r-gray-900 bg-[#0003009e] backdrop-blur ease-in-out duration-500"
+            ? "left-0 top-0 fixed w-[60%] h-[1000px] border-r border-r-gray-900 bg-[#0003009e] z-50 backdrop-blur ease-in-out duration-500"
             : "left-[-100%] top-0 fixed w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500"
         }
       >
@@ -84,7 +84,7 @@ const Navbar = () => {
           </li>
           <li className="p-4 border-b border-b-gray-700">
             <ScrollLink to="about" smooth={true} duration={500} offset={-70}>
-              About
+              Skills
             </ScrollLink>
           </li>
           <li className="p-4">
