@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Link from "next/link";
 import Popup from "../components/Popup"; // Update the path if needed
+import Image from "next/image";
 
 
 const Contact = () => {
@@ -58,7 +59,7 @@ const Contact = () => {
           {/* Avatar Card */}
           <div className="bg-[#2a2a2a] shadow m-10 p-4 rounded-lg flex flex-col h-full">
 
-    <img
+    <Image
       src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg"  
       alt="Gaurav Kumar"
       className="w-32 h-32 rounded-full mx-auto"
