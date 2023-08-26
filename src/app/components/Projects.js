@@ -16,11 +16,11 @@ const Projects = () => {
         {/* Card 1 */}
         
         <ProjectCard
-          title="DailyBlog"
-          technologies={["HTML", "CSS", "Javascript", "MongoDB", "ExpressJS"]}
-          description="An intuitive web application that empowers users to craft and explore posts shared by the community. Seamlessly create, publish, and read posts without the need for authentication. Your posts are stored securely in the database for future reference."
-          githubLink="https://github.com/i-m-Gaurav/Blog/tree/master"
-          projectLink="https://daily-blog-xhek.onrender.com/"
+          title="Post!T"
+          technologies={["NextJS", "Tailwind", "Javascript", "MongoDB", "NextAuth"]}
+          description="Post!T is a web application, where user can create and explore posts shared by the community. Seamlessly create, publish, and read posts. Your posts are stored securely in the database for future reference."
+          githubLink="https://github.com/i-m-Gaurav/mars.github.io"
+          projectLink="https://portfolio-i-m-gaurav.vercel.app/"
         />
 
 
@@ -32,6 +32,24 @@ const Projects = () => {
           githubLink="https://github.com/i-m-Gaurav/mars.github.io"
           projectLink="https://gauravcodes.me/mars.github.io/"
         />
+        {/* Card 3*/}
+        <ProjectCard
+          title="DailyBlog"
+          technologies={["HTML", "CSS", "Javascript", "MongoDB", "ExpressJS"]}
+          description="An intuitive web application that empowers users to craft and explore posts shared by the community. Seamlessly create, publish, and read posts without the need for authentication. Your posts are stored securely in the database for future reference."
+          githubLink="https://github.com/i-m-Gaurav/mars.github.io"
+          projectLink="https://gauravcodes.me/mars.github.io/"
+        />
+
+         {/* Card 3*/}
+         <ProjectCard
+          title="Weather App"
+          technologies={["NextJS", "Tailwind", "Javascript", "API"]}
+          description="This is a simple weather app built with Next.js that uses the OpenWeather free API."
+          githubLink="https://github.com/i-m-Gaurav/NextJS-weatherApp"
+          projectLink="https://next-js-weather-app-puce.vercel.app/"
+        />
+
 
        
 

@@ -55,7 +55,8 @@ const Contact = () => {
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-[#00df9a]">Contact Me</h1>
         </div>
-        <div className="flex flex-wrap justify-center md:space-x-auto">
+  <div className="flex flex-row md:justify-around flex-wrap  w-full bg-[#1e1e1e] py-16  max-w-[1240px] mx-auto sm:justify-center lg:justify-between">
+        
           {/* Avatar Card */}
           <div className="bg-[#2a2a2a] shadow m-10 p-4 rounded-lg flex flex-col h-full">
 
