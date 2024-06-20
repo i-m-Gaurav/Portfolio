@@ -11,6 +11,7 @@ const Projects = () => {
                         title="GGV Mart" 
                         description="A dynamic marketplace app enabling users to buy, sell, and trade items locally with ease. Connect with your community." 
                         image="/ggvmart.png" 
+                        
                     />
                 </div>
                 <div className="p-2 w-full sm:w-1/2 lg:w-1/3">
