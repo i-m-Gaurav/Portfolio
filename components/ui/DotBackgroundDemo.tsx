@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { TextGenerateEffectDemo } from "./textgenerate";
+import { EvervaultCardDemo } from "./EvervaultCardDemo";
 
 export function DotBackgroundDemo() {
   return (
@@ -22,7 +23,8 @@ export function DotBackgroundDemo() {
             </div>
             <div className="w-1/2">
             <h1 className="mb-5">About me</h1>
-            <TextGenerateEffectDemo/>
+            {/* <TextGenerateEffectDemo/> */}
+            <EvervaultCardDemo/>
         
             </div>
         </div>
