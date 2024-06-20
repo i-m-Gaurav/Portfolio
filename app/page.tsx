@@ -1,6 +1,8 @@
 import { DotBackgroundDemo } from "@/components/ui/DotBackgroundDemo";
 import Hero from "./components/Hero";
 import { GridBackgroundDemo } from "@/components/ui/GridBackgroundDemo";
+import { InfiniteMovingCardsDemo } from "@/components/ui/Infinite";
+import { InfiniteMovingCardsDemo2 } from "@/components/ui/Infinite2";
 
 export default function Home() {
   return (
@@ -8,6 +10,8 @@ export default function Home() {
     
      <Hero/>
      <DotBackgroundDemo/>
+     <InfiniteMovingCardsDemo/>
+     <InfiniteMovingCardsDemo2/>
            
     </main>
   );
