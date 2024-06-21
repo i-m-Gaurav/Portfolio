@@ -13,10 +13,9 @@ export function GridBackgroundDemo() {
         <h1 className="text-5xl py-4 px-4 font-extrabold text-neutral-600 dark:text-neutral-400">
           Hi There, I am Gaurav
         </h1>
-        <p className=" text-md text-gray-500 px-4 mb-32">
-          Copy paste the most trending components and use them in your websites
-          without having to worry about styling and animations.
-        </p>
+        <p className="text-md text-gray-500 px-4 mb-32">
+  Frontend developer with a passion for UI/UX and full-stack development. Crafting responsive websites and applications that make a difference. Ready to turn your ideas into digital reality.
+</p>
        
         <div>
           <button className="px-8 py-2 mx-4 border border-black bg-transparent text-black  dark:border-white relative group transition duration-200">
