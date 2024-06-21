@@ -8,8 +8,8 @@ import AnimatedTooltipPreview5 from "../../components/ui/tooltip/tooltip5";
 
 const Projects = () => {
     return (
-        <div className="flex flex-wrap justify-center  p-2 max-w-7xl mx-auto mt-24 sm:px-6 lg:px-8">
-            <h1 className="text-4xl font-bold text-center p-5">Personal Projects</h1>
+        <div className="flex flex-wrap justify-center  p-2 max-w-7xl mx-auto mt-16 sm:px-6 lg:px-8">
+            <h1 className="text-4xl font-bold text-center p-5 mb-6">Personal Projects</h1>
             <div className="flex flex-wrap w-full justify-center lg:justify-start">
                 <div className="p-2 w-full sm:w-1/2 lg:w-1/3">
                     <Cards 

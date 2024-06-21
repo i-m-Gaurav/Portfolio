@@ -28,7 +28,7 @@ export function GridBackgroundDemo() {
             </div>
           </div>
         </div>
-        <div className="w-full md:w-1/2 p-4 md:p-8 flex flex-col items-center">
+        <div className="w-full md:w-1/2 p-4  md:p-8 flex flex-col items-center">
           <Image src="/hero.svg" alt="hero" width={500} height={500} layout="responsive" />
           <div className="flex justify-center items-center mt-10 space-x-4">
             <Link href="https://github.com/i-m-Gaurav" target="_blank" rel="noopener noreferrer">
@@ -40,16 +40,14 @@ export function GridBackgroundDemo() {
             <Link href="https://www.instagram.com/i.m.gauravkr/" target="_blank" rel="noopener noreferrer">
               <Image src="/insta.svg" alt="Instagram" width={40} height={40} />
             </Link>
-            <Link href="indiagauravkumar@gmai.com" target="_blank" rel="noopener noreferrer">
-              <Image src="/gmail.svg" alt="Gmail" width={40} height={40} />
-            </Link>
+
             <Link href="https://discord.com/users/blueduckpond" target="_blank" rel="noopener noreferrer">
               <Image src="/discord.svg" alt="Discord" width={40} height={40} />
             </Link>
-            <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <Link href="https://linkedin.com/in/i-am-gaurav" target="_blank" rel="noopener noreferrer">
               <Image src="/linkedin.svg" alt="LinkedIn" width={40} height={40} />
             </Link>
-            <Link href="https://spotify.com" target="_blank" rel="noopener noreferrer">
+            <Link href="https://open.spotify.com/user/31khy5gaek64ujx3cs7b36zufvry?si=KY0kH_6rQMOQOfOwo00M7Q " target="_blank" rel="noopener noreferrer">
               <Image src="/spotify.svg" alt="Spotify" width={40} height={40} />
             </Link>
           </div>
