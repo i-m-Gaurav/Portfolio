@@ -1,8 +1,12 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export function GridBackgroundDemo() {
+  const scrollToBottom = () => {
+    document.documentElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+  };
   return (
     <div className="h-[30rem] w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex justify-center items-center">
       {/* Radial gradient for the container to give a faded look */}
@@ -17,13 +21,15 @@ export function GridBackgroundDemo() {
               Frontend developer with a passion for UI/UX and full-stack development. Crafting responsive websites and applications that make a difference. Ready to turn your ideas into digital reality.
             </p>
             <div className="flex flex-col md:flex-row items-center">
-              <button className="px-8 py-2 mx-2 my-2 border border-black bg-transparent text-black dark:border-white relative group transition duration-200">
+              <button onClick={scrollToBottom} className="px-8 py-2 mx-2 my-2 border border-black bg-transparent text-black dark:border-white relative group transition duration-200">
                 <div className="absolute -bottom-2 -right-2 bg-gray-200 h-full w-full -z-10 group-hover:bottom-0 group-hover:right-0 transition-all duration-200" />
                 <span className="relative">Projects</span>
               </button>
               <button className="px-8 py-2 mx-2 my-2 border border-black bg-transparent text-black dark:border-white relative group transition duration-200">
+                <Link href="https://drive.google.com/file/d/1ZarKY1BU9qMNgmzKd8oodPeefa0M9J_X/view?usp=sharing" target="_blank">
                 <div className="absolute -bottom-2 -right-2 bg-gray-300 h-full w-full -z-10 group-hover:bottom-0 group-hover:right-0 transition-all duration-200" />
                 <span className="relative">Resume/CV</span>
+                </Link>
               </button>
             </div>
           </div>
