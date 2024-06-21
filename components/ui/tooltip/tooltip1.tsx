@@ -4,28 +4,28 @@ import { AnimatedTooltip } from "../animated-tooltip";
 const people = [
   {
     id: 1,
-    name: "John Doe",
-    designation: "Software Engineer",
+    name: "NextJS",
+    designation:"a",
     image:
       "/nexts.png",
   },
   {
     id: 2,
-    name: "Robert Johnson",
+    name: "Prisma",
     designation: "Product Manager",
     image:
     "/prisma.png",
 },
   {
     id: 3,
-    name: "Jane Smith",
+    name: "TailwindCSS",
     designation: "Data Scientist",
     image:
     "/tail.png",
 },
   {
     id: 4,
-    name: "Emily Davis",
+    name: "Supabase",
     designation: "UX Designer",
     image:
     "/supabase.png",

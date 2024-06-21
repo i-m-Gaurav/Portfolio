@@ -4,7 +4,7 @@ import { AnimatedTooltip } from "../animated-tooltip";
 const people = [
   {
     id: 1,
-    name: "John Doe",
+    name: "NextJS",
     designation: "Software Engineer",
     image:
       "/nexts.png",
@@ -12,14 +12,14 @@ const people = [
   
   {
     id: 2,
-    name: "Jane Smith",
+    name: "TailwindCSS",
     designation: "Data Scientist",
     image:
     "/tail.png",
 },
   {
     id: 3,
-    name: "Emily Davis",
+    name: "MongoDB",
     designation: "UX Designer",
     image:
     "/mongo.png",
