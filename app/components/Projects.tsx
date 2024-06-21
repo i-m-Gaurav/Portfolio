@@ -1,5 +1,4 @@
-import { EvervaultCardDemo } from "@/components/ui/EvervaultCardDemo";
-import Image from "next/image";
+
 import Cards from "../components/Cards";
 import AnimatedTooltipPreview1 from "../../components/ui/tooltip/tooltip1"; 
 import AnimatedTooltipPreview2 from "../../components/ui/tooltip/tooltip2"; 

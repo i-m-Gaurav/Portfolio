@@ -1,8 +1,4 @@
-import { DotBackgroundDemo } from "@/components/ui/DotBackgroundDemo";
-import { FlipWordsDemo } from "@/components/ui/FlipWordsDemo";
 import { GridBackgroundDemo } from "@/components/ui/GridBackgroundDemo";
-import { InfiniteMovingCardsDemo } from "@/components/ui/Infinite";
-import Image from "next/image";
 import React from "react";
 
 const Hero = () => {
