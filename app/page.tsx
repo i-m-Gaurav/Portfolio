@@ -10,10 +10,11 @@ export default function Home() {
     <main>
     
      <Hero/>
+     <Projects/>
      <DotBackgroundDemo/>
      <InfiniteMovingCardsDemo/>
      <InfiniteMovingCardsDemo2/>
-     <Projects/>
+     
            
     </main>
   );
