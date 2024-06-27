@@ -8,7 +8,7 @@ const Cards = ({ title, description, github, live,image, TooltipComponent }: any
     return (
         <div className="max-w-sm w-full bg-[#76767619]   text-xs  border border-[#30363d] shadow-lg rounded-lg overflow-hidden mx-auto md:mx-4 mb-4">
            <div className="p-2 flex justify-start text-xs items-center border-b border-[#30363d]">
-                <h1 className="text-xs mr-4 px-2 md:text-sm font-semibold text-[#fff]">{title}</h1>
+                <h1 className="text-xs mr-4 px-2 md:text-sm font-normal text-[#e6edf3]">{title}</h1>
                 {github && (
                     <Link href={github}>
                         <FaGithub size={20} />
@@ -17,7 +17,7 @@ const Cards = ({ title, description, github, live,image, TooltipComponent }: any
             </div>
             <div className="p-2 md:p-4 flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
                 <div className="flex-1">
-                    <p className="text-white text-xs md:text-xs">{description}</p>
+                    <p className="text-[#e6edf3] text-xs md:text-xs">{description}</p>
                 </div>
                 <div className="flex-1">
                     <Image src={image} height={200} width={200} alt="Project Image" className="w-full h-24 md:h-32 object-cover rounded-lg shadow-md" />
