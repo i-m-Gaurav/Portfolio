@@ -38,7 +38,7 @@ export function GridBackgroundDemo() {
           <Image src="/hero.svg" alt="hero" width={500} height={500} layout="responsive" />
           <div className="flex justify-center items-center mt-10 space-x-4">
             <Link href="https://github.com/i-m-Gaurav" target="_blank" rel="noopener noreferrer">
-              <Image src="/github.svg" alt="GitHub" width={40} height={40} />
+              <Image className="" src="/github.svg" alt="GitHub" width={40} height={40} />
             </Link>
             <Link href="https://x.com/_i_gaurav" target="_blank" rel="noopener noreferrer">
               <Image src="/x.svg" alt="X" width={40} height={40} />
