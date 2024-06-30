@@ -5,6 +5,7 @@ import AnimatedTooltipPreview1 from "@/components/ui/tooltip/tooltip1";
 
 
 const Cards = ({ title, description, github, live,image, TooltipComponent }: any) => {
+
     return (
         <div className="max-w-sm w-full bg-[#76767619]   text-xs  border border-[#30363d] shadow-lg rounded-lg overflow-hidden mx-auto md:mx-4 mb-4">
            <div className="p-2 flex justify-start text-xs items-center border-b border-[#30363d]">
@@ -16,6 +17,7 @@ const Cards = ({ title, description, github, live,image, TooltipComponent }: any
                 )}
             </div>
             <div className="p-2 md:p-4 flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+        
                 <div className="flex-1">
                     <p className="text-[#e6edf3] text-xs md:text-xs">{description}</p>
                 </div>
@@ -30,7 +32,7 @@ const Cards = ({ title, description, github, live,image, TooltipComponent }: any
                       
                     </div>
                 </div>
-                <a href={live} className="text-white hover:underline text-right text-xs md:text-sm">Live link</a>
+                <a href={live} className="text-white hover:underline text-right text-xs md:text-sm">Try Now</a>
             </div>
         </div>
     )
