@@ -1,11 +1,14 @@
-"use client"
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export function GridBackgroundDemo() {
   const scrollToBottom = () => {
-    document.documentElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    document.documentElement.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+    });
   };
   return (
     <div className="h-[30rem] w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex justify-center items-center">
@@ -18,42 +21,83 @@ export function GridBackgroundDemo() {
               Hi There, I am Gaurav
             </h1>
             <p className="text-sm md:text-md text-gray-500 mb-8 md:mb-32">
-              Frontend developer with a passion for UI/UX and full-stack development. Crafting responsive websites and applications that make a difference. Ready to turn your ideas into digital reality.
+              Frontend developer with a passion for UI/UX and full-stack
+              development. Crafting responsive websites and applications that
+              make a difference. Ready to turn your ideas into digital reality.
             </p>
             <div className="flex flex-col md:flex-row items-center">
-              {/* <button onClick={scrollToBottom} className="px-8 py-2 mx-2 my-2 border border-black bg-transparent text-black dark:border-white relative group transition duration-200">
-                <div className="absolute -bottom-2 -right-2 bg-gray-200 h-full w-full -z-10 group-hover:bottom-0 group-hover:right-0 transition-all duration-200" />
-                <span className="relative">Projects</span>
-              </button> */}
-              <button className="px-8 py-2 mx-2 my-2 border border-black bg-transparent text-black dark:border-white relative group transition duration-200">
-                <Link href="https://drive.google.com/file/d/1ZarKY1BU9qMNgmzKd8oodPeefa0M9J_X/view?usp=sharing" target="_blank">
-                <div className="absolute -bottom-2 -right-2 bg-gray-300 h-full w-full -z-10 group-hover:bottom-0 group-hover:right-0 transition-all duration-200" />
-                <span className="relative">Resume/CV</span>
+              <button className="shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-transparent border border-[#30363d]  dark:text-white text-black rounded-md font-normal transform hover:-translate-y-1 transition duration-400">
+                <Link
+                  href="https://drive.google.com/file/d/1ZarKY1BU9qMNgmzKd8oodPeefa0M9J_X/view?usp=sharing"
+                  target="_blank"
+                >
+                  <span className="relative">Resume</span>
                 </Link>
               </button>
             </div>
           </div>
         </div>
         <div className="w-full md:w-1/2 p-4  md:p-8 flex flex-col items-center">
-          <Image src="/hero.svg" alt="hero" width={500} height={500} layout="responsive" />
+          <Image
+            src="/hero.svg"
+            alt="hero"
+            width={500}
+            height={500}
+            layout="responsive"
+          />
           <div className="flex justify-center items-center mt-10 space-x-4">
-            <Link href="https://github.com/i-m-Gaurav" target="_blank" rel="noopener noreferrer">
-              <Image className="" src="/github.svg" alt="GitHub" width={40} height={40} />
+            <Link
+              href="https://github.com/i-m-Gaurav"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                className=""
+                src="/github.svg"
+                alt="GitHub"
+                width={40}
+                height={40}
+              />
             </Link>
-            <Link href="https://x.com/_i_gaurav" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://x.com/_i_gaurav"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Image src="/x.svg" alt="X" width={40} height={40} />
             </Link>
-            <Link href="https://www.instagram.com/i.m.gauravkr/" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://www.instagram.com/i.m.gauravkr/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Image src="/insta.svg" alt="Instagram" width={40} height={40} />
             </Link>
 
-            <Link href="https://discord.com/users/blueduckpond" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://discord.com/users/blueduckpond"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Image src="/discord.svg" alt="Discord" width={40} height={40} />
             </Link>
-            <Link href="https://linkedin.com/in/i-am-gaurav" target="_blank" rel="noopener noreferrer">
-              <Image src="/linkedin.svg" alt="LinkedIn" width={40} height={40} />
+            <Link
+              href="https://linkedin.com/in/i-am-gaurav"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/linkedin.svg"
+                alt="LinkedIn"
+                width={40}
+                height={40}
+              />
             </Link>
-            <Link href="https://open.spotify.com/user/31khy5gaek64ujx3cs7b36zufvry?si=KY0kH_6rQMOQOfOwo00M7Q " target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://open.spotify.com/user/31khy5gaek64ujx3cs7b36zufvry?si=KY0kH_6rQMOQOfOwo00M7Q "
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Image src="/spotify.svg" alt="Spotify" width={40} height={40} />
             </Link>
           </div>
