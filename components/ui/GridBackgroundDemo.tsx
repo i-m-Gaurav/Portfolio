@@ -26,7 +26,7 @@ export function GridBackgroundDemo() {
               make a difference. Ready to turn your ideas into digital reality.
             </p>
             <div className="flex flex-col md:flex-row items-center">
-              <button className="shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-transparent border border-[#30363d]  dark:text-white text-black rounded-md font-normal transform hover:-translate-y-1 transition duration-400">
+              <button className="shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-transparent border border-white dark:border-white  dark:text-white text-black rounded-md font-normal transform hover:-translate-y-1 transition duration-400">
                 <Link
                   href="https://drive.google.com/file/d/1ZarKY1BU9qMNgmzKd8oodPeefa0M9J_X/view?usp=sharing"
                   target="_blank"
