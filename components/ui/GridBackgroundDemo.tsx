@@ -17,16 +17,16 @@ export function GridBackgroundDemo() {
       <div className="flex flex-col md:flex-row justify-center items-center z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 w-full">
         <div className="flex flex-col md:flex-row items-center w-full md:w-1/2 p-4 md:p-8">
           <div className="text-center md:text-left">
-            <h1 className="text-3xl md:text-5xl py-4 font-extrabold text-neutral-600 dark:text-neutral-400">
+            <h1 className="text-3xl md:text-5xl py-4 font-extrabold text-[#cccccc] dark:text-[#cccccc]">
               Hi There, I am Gaurav
             </h1>
-            <p className="text-sm md:text-md text-gray-500 mb-8 md:mb-32">
+            <p className="text-sm md:text-md text-[#cccccc] mb-8 md:mb-32">
               Frontend developer with a passion for UI/UX and full-stack
               development. Crafting responsive websites and applications that
               make a difference. Ready to turn your ideas into digital reality.
             </p>
             <div className="flex flex-col md:flex-row items-center">
-              <button className="shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-transparent border border-white dark:border-white  dark:text-white text-black rounded-md font-normal transform hover:-translate-y-1 transition duration-400">
+              <button className="shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-transparent border border-[#36363d] dark:border-[#36363d]  dark:text-white text-black rounded-md font-normal transform hover:-translate-y-1 transition duration-400">
                 <Link
                   href="https://drive.google.com/file/d/1ZarKY1BU9qMNgmzKd8oodPeefa0M9J_X/view?usp=sharing"
                   target="_blank"
