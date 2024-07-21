@@ -5,6 +5,7 @@ import AnimatedTooltipPreview2 from "../../components/ui/tooltip/tooltip2";
 import AnimatedTooltipPreview3 from "../../components/ui/tooltip/tooltip3"; 
 import AnimatedTooltipPreview4 from "../../components/ui/tooltip/tooltip4";
 import AnimatedTooltipPreview5 from "../../components/ui/tooltip/tooltip5";
+import AnimatedTooltipPreview6 from "../../components/ui/tooltip/tooltip6";
 
 const Projects = () => {
     return (
@@ -34,7 +35,7 @@ const Projects = () => {
                         title="TechVerse" 
                         description="A community of tech enthusiasts sharing knowledge, resources, and opportunities. Connect, learn, and grow together." 
                         image="/techverse.png" 
-                        TooltipComponent={<AnimatedTooltipPreview1/>}
+                        TooltipComponent={<AnimatedTooltipPreview6/>}
                         github = "https://github.com/i-m-Gaurav/Techverse"
                         live = "https://techversecommunity.vercel.app"
                         

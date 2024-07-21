@@ -17,11 +17,17 @@ const people = [
     image:
     "/tail.png",
 },
+{
+    id: 3,
+    name : "NextAuth",
+    designation : "demo",
+    image : "/nextauth.png",
+}
   
   
 ];
 
-const AnimatedTooltipPreview5 = () => {
+const AnimatedTooltipPreview6 = () => {
   return (
     <div className="flex flex-row items-center justify-center  w-full">
       <AnimatedTooltip items={people} />
@@ -29,4 +35,4 @@ const AnimatedTooltipPreview5 = () => {
   );
     }
 
-export default AnimatedTooltipPreview5;
+export default AnimatedTooltipPreview6;
