@@ -22,6 +22,12 @@ const people = [
     name : "NextAuth",
     designation : "demo",
     image : "/nextauth.png",
+},
+{
+    id: 4,
+    name : "MongoDB",
+    designation : "demo",
+    image : '/mongo.png'
 }
   
   
