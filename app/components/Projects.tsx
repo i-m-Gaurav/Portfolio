@@ -11,6 +11,9 @@ const Projects = () => {
         <div className="flex flex-wrap justify-center  p-2 max-w-7xl mx-auto mt-16 sm:px-6 lg:px-8">
             <h1 className="text-4xl font-bold text-center p-5 mb-6">Personal Projects</h1>
             <div className="flex flex-wrap w-full justify-center lg:justify-start">
+
+                {/* GGVMart */}
+
                 <div className="p-2 w-full sm:w-1/2 lg:w-1/3">
                     <Cards 
                         title="GGV Mart" 
@@ -22,6 +25,22 @@ const Projects = () => {
                         
                     />
                 </div>
+
+
+                {/* TechVerse */}
+
+                <div className="p-2 w-full sm:w-1/2 lg:w-1/3">
+                    <Cards 
+                        title="TechVerse" 
+                        description="A community of tech enthusiasts sharing knowledge, resources, and opportunities. Connect, learn, and grow together." 
+                        image="/techverse.png" 
+                        TooltipComponent={<AnimatedTooltipPreview1/>}
+                        github = "https://github.com/i-m-Gaurav/Techverse"
+                        live = "https://techversecommunity.vercel.app"
+                        
+                    />
+                </div>
+
                 <div className="p-2 w-full sm:w-1/2 lg:w-1/3">
                     <Cards 
                         title="CosmoDrome"
