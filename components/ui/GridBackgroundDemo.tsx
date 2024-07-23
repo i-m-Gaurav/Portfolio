@@ -74,13 +74,17 @@ export function GridBackgroundDemo() {
               <Image src="/insta.svg" alt="Instagram" width={40} height={40} />
             </Link>
 
-            <Link
+            {/* No need for the discord on the portfolio */}
+
+            {/* <Link
               href="https://discord.com/users/blueduckpond"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Image src="/discord.svg" alt="Discord" width={40} height={40} />
-            </Link>
+            </Link> */}
+
+
             <Link
               href="https://linkedin.com/in/i-am-gaurav"
               target="_blank"
@@ -93,13 +97,15 @@ export function GridBackgroundDemo() {
                 height={40}
               />
             </Link>
-            <Link
+
+            {/* No need for the spotify on the portfolio */}
+            {/* <Link
               href="https://open.spotify.com/user/31khy5gaek64ujx3cs7b36zufvry?si=KY0kH_6rQMOQOfOwo00M7Q "
               target="_blank"
               rel="noopener noreferrer"
             >
               <Image src="/spotify.svg" alt="Spotify" width={40} height={40} />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
