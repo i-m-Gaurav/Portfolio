@@ -64,7 +64,8 @@ const Projects = () => {
 
                     />
                 </div>
-                <div className="p-2 w-full sm:w-1/2 lg:w-1/3">
+                
+                {/* <div className="p-2 w-full sm:w-1/2 lg:w-1/3">
                     <Cards 
                         title="Weather App"
                         description = "A weather app that allows users to search for the weather in any city and view the forecast for the next 5 days."
@@ -74,7 +75,7 @@ const Projects = () => {
                         live = "https://next-js-weather-app-puce.vercel.app/"
                      />
                         
-                    </div>
+                    </div> */}
                     <div className="p-2 w-full sm:w-1/2 lg:w-1/3">
                     <Cards 
                         title="design1"
