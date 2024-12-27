@@ -1,11 +1,11 @@
 
-import Cards from "../components/Cards";
-import AnimatedTooltipPreview1 from "../../components/ui/tooltip/tooltip1"; 
-import AnimatedTooltipPreview2 from "../../components/ui/tooltip/tooltip2"; 
-import AnimatedTooltipPreview3 from "../../components/ui/tooltip/tooltip3"; 
-import AnimatedTooltipPreview4 from "../../components/ui/tooltip/tooltip4";
-import AnimatedTooltipPreview5 from "../../components/ui/tooltip/tooltip5";
-import AnimatedTooltipPreview6 from "../../components/ui/tooltip/tooltip6";
+import Cards from "./Cards";
+import AnimatedTooltipPreview1 from "./ui/tooltip/tooltip1"; 
+import AnimatedTooltipPreview2 from "./ui/tooltip/tooltip2"; 
+import AnimatedTooltipPreview3 from "./ui/tooltip/tooltip3"; 
+import AnimatedTooltipPreview4 from "./ui/tooltip/tooltip4";
+import AnimatedTooltipPreview5 from "./ui/tooltip/tooltip5";
+import AnimatedTooltipPreview6 from "./ui/tooltip/tooltip6";
 
 const Projects = () => {
     return (
@@ -64,7 +64,7 @@ const Projects = () => {
 
                     />
                 </div>
-                
+
                 {/* <div className="p-2 w-full sm:w-1/2 lg:w-1/3">
                     <Cards 
                         title="Weather App"
