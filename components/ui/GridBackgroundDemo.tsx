@@ -28,7 +28,7 @@ export function GridBackgroundDemo() {
             <div className="flex flex-col md:flex-row items-center">
               <button className="shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-transparent border border-[#36363d] dark:border-[#36363d]  dark:text-white text-black rounded-md font-normal transform hover:-translate-y-1 transition duration-400">
                 <Link
-                  href="https://drive.google.com/file/d/1ZarKY1BU9qMNgmzKd8oodPeefa0M9J_X/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1Dl4hbHHD670mivJVFCRquueTB2oQD-cn/view?usp=drive_link"
                   target="_blank"
                 >
                   <span className="relative">Resume</span>
