@@ -54,16 +54,11 @@ const GithubProjectCard = () => {
   }
 
   return (
-    <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <ul className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {repos.map((repo) => (
-        <>
+        <li key={repo.id}>
           <Link href={repo.html_url} target="_blank" rel="noopener noreferrer">
-            {" "}
-            {/* Use html_url */}
-            <div
-              key={repo.id}
-              className="max-w-sm w-full bg-[#76767619] text-xs border border-[#30363d] shadow-lg rounded-lg overflow-hidden"
-            >
+            <div className="max-w-sm w-full bg-[#76767619] text-xs border border-[#30363d] shadow-lg rounded-lg overflow-hidden">
               <div className="p-2 flex justify-start text-xs items-center border-b border-[#30363d]">
                 <h1 className="text-xs mr-4 px-2 md:text-sm font-normal text-[#e6edf3]">
                   {repo.name}
@@ -83,9 +78,9 @@ const GithubProjectCard = () => {
               </div>
             </div>
           </Link>
-        </>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 
