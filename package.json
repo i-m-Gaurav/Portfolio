@@ -14,6 +14,7 @@
     "gaurav": "file:",
     "mini-svg-data-uri": "^1.4.4",
     "next": "^15.1.6",
+    "octokit": "^4.1.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.2.1",
