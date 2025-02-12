@@ -38,13 +38,7 @@ export function GridBackgroundDemo() {
           </div>
         </div>
         <div className="w-full md:w-1/2 p-4  md:p-8 flex flex-col items-center">
-          <Image
-            src="/hero.svg"
-            alt="hero"
-            width={500}
-            height={500}
-            layout="responsive"
-          />
+         
           <div className="flex justify-center items-center mt-10 space-x-4">
             <Link
               href="https://github.com/i-m-Gaurav"
