@@ -1,5 +1,6 @@
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
+import Image from 'next/image'
 
 interface Project {
     name: string;
@@ -27,8 +28,10 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
     >
       {!isGithubProject && (
         <div className="relative aspect-video">
-          <img 
+          <Image
             src={project.image} 
+            width={1920}
+            height={1080}
             alt={project.name}
             className="w-full h-full object-cover"
           />
