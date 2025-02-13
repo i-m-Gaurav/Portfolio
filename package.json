@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.66.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.4.1",
     "gaurav": "file:",
+    "lucide-react": "^0.475.0",
     "mini-svg-data-uri": "^1.4.4",
     "next": "^15.1.6",
     "octokit": "^4.1.1",
@@ -19,6 +21,7 @@
     "react-dom": "^19.0.0",
     "react-icons": "^5.2.1",
     "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7",
     "three": "^0.165.0"
   },
   "devDependencies": {

@@ -1,113 +1,184 @@
-import Cards from "./Cards";
-import AnimatedTooltipPreview1 from "./ui/tooltip/tooltip1"; 
-import AnimatedTooltipPreview2 from "./ui/tooltip/tooltip2"; 
-import AnimatedTooltipPreview3 from "./ui/tooltip/tooltip3"; 
-import AnimatedTooltipPreview4 from "./ui/tooltip/tooltip4";
-import AnimatedTooltipPreview5 from "./ui/tooltip/tooltip5";
-import AnimatedTooltipPreview6 from "./ui/tooltip/tooltip6";
+'use client'
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import ProjectCard from './ProjectCard';
 
-const Projects: React.FC = () => {
-    return (
-        <>
-        
-       
-        <div className="flex flex-wrap justify-center  p-2 max-w-7xl mx-auto mt-16 sm:px-6 lg:px-8">
-            <h1 className="text-4xl font-bold text-center p-5 mb-6">Personal Projects</h1>
-            <div className="flex flex-wrap w-full justify-center lg:justify-start">
+type Project = {
+  id: number;
+  name: string;
+  description: string;
+  technologies: string[];
+  link: string;
+  github: string;
+  image: string;
+};
 
+const personalProjects: Project[] = [
+  {
+    id: 1,
+    name: "Show Time",
+    description: "Find and book tickets to must-see shows and events",
+    technologies: ["Next.js", "React", "Tailwind CSS"],
+    link: "https://showtimee.vercel.app",
+    github: "https://github.com/i-m-Gaurav/bookmyshow-clone",
+    image: "/showtime.png"
+  },
+  {
+    id: 2,
+    name: "GGV Mart",
+    description: "A dynamic marketplace app enabling users to buy, sell, and trade items locally with ease. Connect with your community.",
+    technologies: ["React", "Node.js", "MongoDB"],
+    link: "https://ggvmart.vercel.app",
+    github: "https://github.com/yashraj22/GGVMart",
+    image: "/ggvmart.png"
+  },
+  {
+    id: 3,
+    name: "TechVerse",
+    description: "A community of tech enthusiasts sharing knowledge, resources, and opportunities. Connect, learn, and grow together.",
+    technologies: ["Next.js", "TypeScript", "Tailwind"],
+    link: "https://techversecommunity.vercel.app",
+    github: "https://github.com/i-m-Gaurav/Techverse",
+    image: "/techverse.png"
+  },
+  {
+    id: 4,
+    name: "CosmoDrome",
+    description: "A web app showcasing daily images captured by the Mars rover. Explore an extensive gallery of Martian landscapes.",
+    technologies: ["React", "NASA API", "Tailwind"],
+    link: "https://i-m-gaurav.github.io/mars.github.io/",
+    github: "https://github.com/i-m-Gaurav/mars.github.io",
+    image: "/cosmodrome.png"
+  },
+  {
+    id: 5,
+    name: "Prompt Store",
+    description: "Secure, authenticated platform for sharing and discovering AI prompts, streamlining creativity across various needs.",
+    technologies: ["Next.js", "MongoDB", "OAuth"],
+    link: "https://post-it-umber.vercel.app/",
+    github: "https://github.com/i-m-Gaurav/Post.it",
+    image: "/prompt.png"
+  },
+  {
+    id: 6,
+    name: "design1",
+    description: "Modern Design frontend design with NextJS and Tailwind CSS equipped with modern ui components.",
+    technologies: ["Next.js", "Tailwind CSS", "TypeScript"],
+    link: "https://design1-gray.vercel.app/",
+    github: "https://github.com/i-m-Gaurav/design1",
+    image: "/design1.png"
+  },
+  {
+    id: 7,
+    name: "Dribble UI",
+    description: "Pixel-perfect recreation of Dribbble's home page, showcasing frontend skills and attention to detail.",
+    technologies: ["React", "Tailwind CSS", "TypeScript"],
+    link: "https://dribble-ivory.vercel.app/",
+    github: "https://github.com/i-m-Gaurav/Dribble",
+    image: "/dribble.png"
+  }
+];
 
-                 
-                {/* ShowTime */}
-                <div className="p-2 w-full sm:w-1/2 lg:w-1/3">
-                    <Cards 
-                        title="Show Time" 
-                        description="Find and book tickets to must-see shows and events" 
-                        image="/showtime.png" 
-                        TooltipComponent={<AnimatedTooltipPreview1/>}
-                        github="https://github.com/i-m-Gaurav/bookmyshow-clone"
-                        live="https://showtimee.vercel.app"
-                    />
-                </div>
+const Projects = () => {
+    const [activeTab, setActiveTab] = useState<'personal' | 'github'>('personal');
+    const [githubProjects, setGithubProjects] = useState<Project[]>([]);
+    const [loading, setLoading] = useState<boolean>(false);
+    const [error, setError] = useState<string | null>(null);
 
+    useEffect(() => {
+        async function fetchRepos() {
+            setLoading(true);
+            try {
+                const response = await fetch("/api/github");
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || `HTTP error! status: ${response.status}`); // More informative error
+                }
+                const data: any[] = await response.json(); // Type as 'any[]' initially
+                const projects: Project[] = data.map(repo => ({ // Map to Project type
+                    id: repo.id,
+                    name: repo.name,
+                    description: repo.description || "No description available", // Handle missing descriptions
+                    technologies: repo.language ? [repo.language] : [], // Adapt to GitHub data
+                    link: repo.homepage || repo.html_url || "", // Prioritize homepage, fallback to html_url
+                    github: repo.html_url,
+                    image: `https://opengraph.github.com/${repo.owner.login}/${repo.name}`, // Construct image URL
+                }));
+                setGithubProjects(projects);
+                setError(null); // Clear any previous errors
+            } catch (error: any) {
+                console.error("Error fetching GitHub repos:", error);
+                setError(error.message);
+            } finally {
+                setLoading(false);
+            }
+        }
 
+        if (activeTab === 'github') {
+            fetchRepos();
+        }
+    }, [activeTab]);
 
-
-                {/* GGVMart */}
-                <div className="p-2 w-full sm:w-1/2 lg:w-1/3">
-                    <Cards 
-                        title="GGV Mart" 
-                        description="A dynamic marketplace app enabling users to buy, sell, and trade items locally with ease. Connect with your community." 
-                        image="/ggvmart.png" 
-                        TooltipComponent={<AnimatedTooltipPreview1/>}
-                        github="https://github.com/yashraj22/GGVMart"
-                        live="https://ggvmart.vercel.app"
-                    />
-                </div>
-
-
-
-
-
-                {/* TechVerse */}
-                <div className="p-2 w-full sm:w-1/2 lg:w-1/3">
-                    <Cards 
-                        title="TechVerse" 
-                        description="A community of tech enthusiasts sharing knowledge, resources, and opportunities. Connect, learn, and grow together." 
-                        image="/techverse.png" 
-                        TooltipComponent={<AnimatedTooltipPreview6/>}
-                        github="https://github.com/i-m-Gaurav/Techverse"
-                        live="https://techversecommunity.vercel.app"
-                    />
-                </div>
-                <div className="p-2 w-full sm:w-1/2 lg:w-1/3">
-                    <Cards 
-                        title="CosmoDrome"
-                        description="A web app showcasing daily images captured by the Mars rover. Explore an extensive gallery of Martian landscapes."
-                        image="/cosmodrome.png" 
-                        TooltipComponent={<AnimatedTooltipPreview2/>}
-                        github="https://github.com/i-m-Gaurav/mars.github.io"
-                        live="https://i-m-gaurav.github.io/mars.github.io/"
-                    />
-                </div>
-                <div className="p-2 w-full sm:w-1/2 lg:w-1/3">
-                    <Cards 
-                        title="Prompt Store" 
-                        description="Secure, authenticated platform for sharing and discovering AI prompts, streamlining creativity across various needs." 
-                        image="/prompt.png" 
-                        TooltipComponent={<AnimatedTooltipPreview3/>}
-                        github="https://github.com/i-m-Gaurav/Post.it"
-                        live="https://post-it-umber.vercel.app/"
-                    />
-                </div>
-                <div className="p-2 w-full sm:w-1/2 lg:w-1/3">
-                    <Cards 
-                        title="design1"
-                        description="Modern Design frontend design with NextJS and Tailwind CSS equipped with modern ui components."
-                        image="/design1.png" 
-                        TooltipComponent={<AnimatedTooltipPreview4/>}
-                        github="https://github.com/i-m-Gaurav/design1"
-                        live="https://design1-gray.vercel.app/"
-                    />
-                </div>
-                <div className="p-2 w-full sm:w-1/2 lg:w-1/3">
-                    <Cards 
-                        title="Dribble UI"
-                        description="Pixel-perfect recreation of Dribbble's home page, showcasing frontend skills and attention to detail."
-                        image="/dribble.png" 
-                        TooltipComponent={<AnimatedTooltipPreview5/>}
-                        github="https://github.com/i-m-Gaurav/Dribble"
-                        live="https://dribble-ivory.vercel.app/"
-                    />
-                </div>
-            </div>
+  return (
+    <div>
+      <section className="max-w-7xl mx-auto px-4 py-16">
+        <div className="text-center mb-12 animate-fade-up opacity-0">
+          <span className="inline-block px-3 py-1 text-sm font-medium rounded-full glass-effect mb-4">
+            Portfolio
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+          <p className="text-soft-gray max-w-xl mx-auto">
+            A selection of my favorite works, including both personal and open-source projects.
+          </p>
         </div>
-        </>
-    );
-}
+
+        <div className="flex justify-center gap-4 mb-12">
+          <button
+            onClick={() => setActiveTab('personal')}
+            className={`tab-button ${activeTab === 'personal' ? 'active' : ''}`}
+          >
+            Personal Projects
+          </button>
+          <button
+            onClick={() => setActiveTab('github')}
+            className={`tab-button ${activeTab === 'github' ? 'active' : ''}`}
+          >
+            GitHub Projects
+          </button>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {activeTab === 'personal' ? (
+            personalProjects.map((project, index) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                index={index}
+              />
+            ))
+          ) : (
+            loading ? (
+              <div className="col-span-full text-center py-12">
+                <div className="animate-pulse">Loading projects...</div>
+              </div>
+            ) : error ? (
+              <div className="col-span-full text-center py-12">
+                <div className="text-red-500">{error}</div>
+              </div>
+            ) : (
+              githubProjects.map((project, index) => (
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  index={index}
+                />
+              ))
+            )
+          )}
+        </div>
+      </section>
+    </div>
+  );
+};
 
 export default Projects;
-
-
-
