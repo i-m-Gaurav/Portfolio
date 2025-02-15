@@ -70,7 +70,7 @@ const Contact = () => {
         </span>
         <h2 className="text-2xl md:text-3xl font-bold mb-2">Get in Touch</h2>
         <p className="text-soft-gray text-sm max-w-md mx-auto">
-          Have a project in mind or just want to say hi?
+          Go through my projects, if you like some, try to <span className='italic'>hire me</span> or just say hi?
         </p>
       </div>
 
