@@ -1,11 +1,12 @@
 'use client'
 import React from 'react';
-import { Mail, Send } from 'lucide-react';
+import {  Mail, Send } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import Link from 'next/link'
 
 const Contact = () => {
   const { toast } = useToast();
@@ -128,13 +129,13 @@ const Contact = () => {
                 )}
               </Button>
               
-              <a
+              <Link
                 href="mailto:indiagauravkumar@gmail.com"
                 className="flex items-center gap-2 text-sm text-soft-gray hover:text-soft-white transition-colors"
               >
                 <Mail className="h-4 w-4" />
                 Email directly
-              </a>
+              </Link>
             </div>
           </form>
         </div>
