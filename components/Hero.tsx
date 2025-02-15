@@ -24,7 +24,7 @@ const Hero = () => {
       >
         I am Gaurav
         <span className="block text-2xl md:text-3xl mt-4 text-soft-gray font-normal">
-          Full Stack Developer
+          <span className = "text-xs italic">trying to be </span>Full Stack Developer
         </span>
       </h1>
 
