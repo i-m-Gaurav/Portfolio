@@ -62,7 +62,8 @@ const Hero = () => {
         />
       </div>
 
-      <div className="mt-10">
+      <div className=" mt-10 flex gap-6 animate-fade-up opacity-0"
+        style={{ animationDelay: "0.8s" }}>
         <button className="glass-effect w-32 h-10 rounded-full text-sm flex justify-center items-center hover:opacity-80">
           <span className="mr-2 ">
             <File className="text-orange-400 text-xs" />
