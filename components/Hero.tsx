@@ -32,8 +32,7 @@ const Hero = () => {
         className="max-w-xl text-soft-gray mb-8 animate-fade-up opacity-0"
         style={{ animationDelay: "0.6s" }}
       >
-        Crafting elegant solutions for modern web applications with a focus on
-        user experience and clean code.
+        I write code, that code turn into something beautiful or sometime disaster, but i always make sure, it works on everyone machine.
       </p>
 
       <div
