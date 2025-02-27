@@ -17,6 +17,24 @@ const Hero: React.FC = () => {
   const [currentColor, setCurrentColor] = useState("#ffffff");
   const [brushSize, setBrushSize] = useState(5);
   const [showControls, setShowControls] = useState(false);
+  const [isMobileDevice, setIsMobileDevice] = useState(false);
+
+  // Check if device is mobile (screen width < 768px)
+  useEffect(() => {
+    const checkMobileDevice = () => {
+      setIsMobileDevice(window.innerWidth < 768);
+    };
+    
+    // Initial check
+    checkMobileDevice();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkMobileDevice);
+    
+    return () => {
+      window.removeEventListener('resize', checkMobileDevice);
+    };
+  }, []);
 
   // Initialize canvas and load saved drawing
   useEffect(() => {
@@ -82,6 +100,9 @@ const Hero: React.FC = () => {
   };
 
   const startDrawing = (e: React.MouseEvent<HTMLCanvasElement> | React.TouchEvent<HTMLCanvasElement>) => {
+    // Disable drawing on mobile devices
+    if (isMobileDevice) return;
+    
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -108,7 +129,8 @@ const Hero: React.FC = () => {
   };
 
   const draw = (e: React.MouseEvent<HTMLCanvasElement> | React.TouchEvent<HTMLCanvasElement>) => {
-    if (!isDrawing) return;
+    // Disable drawing on mobile devices
+    if (isMobileDevice || !isDrawing) return;
     
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -172,7 +194,7 @@ const Hero: React.FC = () => {
       >
         <canvas
           ref={canvasRef}
-          className="cursor-crosshair"
+          className={`${!isMobileDevice ? "cursor-crosshair" : ""}`}
           onMouseDown={startDrawing}
           onMouseMove={draw}
           onMouseUp={stopDrawing}
@@ -183,18 +205,20 @@ const Hero: React.FC = () => {
         />
       </div>
 
-      {/* Drawing tools button */}
-      <div className="fixed top-4 right-4 z-20">
-        <button 
-          onClick={toggleControls}
-          className="glass-effect w-12 h-12 rounded-full flex justify-center items-center hover:opacity-80"
-        >
-          <Paintbrush size={20} className="text-orange-400" />
-        </button>
-      </div>
+      {/* Drawing tools button - hidden on mobile */}
+      {!isMobileDevice && (
+        <div className="fixed top-4 right-4 z-20">
+          <button 
+            onClick={toggleControls}
+            className="glass-effect w-12 h-12 rounded-full flex justify-center items-center hover:opacity-80"
+          >
+            <Paintbrush size={20} className="text-orange-400" />
+          </button>
+        </div>
+      )}
 
-      {/* Drawing controls */}
-      {showControls && (
+      {/* Drawing controls - hidden on mobile */}
+      {!isMobileDevice && showControls && (
         <div className="fixed top-20 right-4 glass-effect p-4 rounded-lg z-20 flex flex-col gap-3">
           <input 
             type="color" 
@@ -227,6 +251,13 @@ const Hero: React.FC = () => {
               <Download size={16} className="text-green-400" />
             </button>
           </div>
+        </div>
+      )}
+
+      {/* Mobile-only drawing notification */}
+      {isMobileDevice && (
+        <div className="absolute top-4 right-4 z-20 glass-effect p-2 rounded-lg text-xs text-gray-300">
+          <p>Drawing available on desktop</p>
         </div>
       )}
 
