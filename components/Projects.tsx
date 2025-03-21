@@ -16,6 +16,16 @@ type Project = {
 const personalProjects: Project[] = [
   {
     id: 1,
+    name: "Ideos",
+    description: "Ideos is a collaborative platform for innovators to share project ideas, connect with contributors, and access feedback, resources, or team members. It fosters a dynamic community of creators working together to turn ideas into reality. Join to innovate and build the future!",
+    technologies: ["Next.js", "React", "Tailwind CSS"],
+    link: "https://ideos.vercel.app",
+    github: "https://github.com/i-m-Gaurav/ideos",
+    image: "/ideos.png"
+
+  },
+  {
+    id: 2,
     name: "Show Time",
     description: "Find and book tickets to must-see shows and events",
     technologies: ["Next.js", "React", "Tailwind CSS"],
@@ -24,7 +34,7 @@ const personalProjects: Project[] = [
     image: "/showtime.png"
   },
   {
-    id: 2,
+    id: 3,
     name: "GGV Mart",
     description: "A dynamic marketplace app enabling users to buy, sell, and trade items locally with ease. Connect with your community.",
     technologies: ["React", "Node.js", "MongoDB"],
@@ -33,7 +43,7 @@ const personalProjects: Project[] = [
     image: "/ggvmart.png"
   },
   {
-    id: 3,
+    id: 4,
     name: "TechVerse",
     description: "A community of tech enthusiasts sharing knowledge, resources, and opportunities. Connect, learn, and grow together.",
     technologies: ["Next.js", "TypeScript", "Tailwind"],
@@ -42,7 +52,7 @@ const personalProjects: Project[] = [
     image: "/techverse.png"
   },
   {
-    id: 4,
+    id: 5,
     name: "CosmoDrome",
     description: "A web app showcasing daily images captured by the Mars rover. Explore an extensive gallery of Martian landscapes.",
     technologies: ["React", "NASA API", "Tailwind"],
@@ -51,7 +61,7 @@ const personalProjects: Project[] = [
     image: "/cosmodrome.png"
   },
   {
-    id: 5,
+    id: 6,
     name: "Prompt Store",
     description: "Secure, authenticated platform for sharing and discovering AI prompts, streamlining creativity across various needs.",
     technologies: ["Next.js", "MongoDB", "OAuth"],
@@ -60,7 +70,7 @@ const personalProjects: Project[] = [
     image: "/prompt.png"
   },
   {
-    id: 6,
+    id: 7,
     name: "design1",
     description: "Modern Design frontend design with NextJS and Tailwind CSS equipped with modern ui components.",
     technologies: ["Next.js", "Tailwind CSS", "TypeScript"],
@@ -69,7 +79,7 @@ const personalProjects: Project[] = [
     image: "/design1.png"
   },
   {
-    id: 7,
+    id: 8,
     name: "Dribble UI",
     description: "Pixel-perfect recreation of Dribbble's home page, showcasing frontend skills and attention to detail.",
     technologies: ["React", "Tailwind CSS", "TypeScript"],
@@ -80,44 +90,44 @@ const personalProjects: Project[] = [
 ];
 
 const Projects = () => {
-    const [activeTab, setActiveTab] = useState<'personal' | 'github'>('personal');
-    const [githubProjects, setGithubProjects] = useState<Project[]>([]);
-    const [loading, setLoading] = useState<boolean>(false);
-    const [error, setError] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<'personal' | 'github'>('personal');
+  const [githubProjects, setGithubProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
 
-    useEffect(() => {
-        async function fetchRepos() {
-            setLoading(true);
-            try {
-                const response = await fetch("/api/github");
-                if (!response.ok) {
-                    const errorData = await response.json();
-                    throw new Error(errorData.error || `HTTP error! status: ${response.status}`); // More informative error
-                }
-                const data: any[] = await response.json(); // Type as 'any[]' initially
-                const projects: Project[] = data.map(repo => ({ // Map to Project type
-                    id: repo.id,
-                    name: repo.name,
-                    description: repo.description || "No description available", // Handle missing descriptions
-                    technologies: repo.language ? [repo.language] : [], // Adapt to GitHub data
-                    link: repo.homepage || repo.html_url || "", // Prioritize homepage, fallback to html_url
-                    github: repo.html_url,
-                    image: `https://opengraph.github.com/${repo.owner.login}/${repo.name}`, // Construct image URL
-                }));
-                setGithubProjects(projects);
-                setError(null); // Clear any previous errors
-            } catch (error: any) {
-                console.error("Error fetching GitHub repos:", error);
-                setError(error.message);
-            } finally {
-                setLoading(false);
-            }
+  useEffect(() => {
+    async function fetchRepos() {
+      setLoading(true);
+      try {
+        const response = await fetch("/api/github");
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.error || `HTTP error! status: ${response.status}`); // More informative error
         }
+        const data: any[] = await response.json(); // Type as 'any[]' initially
+        const projects: Project[] = data.map(repo => ({ // Map to Project type
+          id: repo.id,
+          name: repo.name,
+          description: repo.description || "No description available", // Handle missing descriptions
+          technologies: repo.language ? [repo.language] : [], // Adapt to GitHub data
+          link: repo.homepage || repo.html_url || "", // Prioritize homepage, fallback to html_url
+          github: repo.html_url,
+          image: `https://opengraph.github.com/${repo.owner.login}/${repo.name}`, // Construct image URL
+        }));
+        setGithubProjects(projects);
+        setError(null); // Clear any previous errors
+      } catch (error: any) {
+        console.error("Error fetching GitHub repos:", error);
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    }
 
-        if (activeTab === 'github') {
-            fetchRepos();
-        }
-    }, [activeTab]);
+    if (activeTab === 'github') {
+      fetchRepos();
+    }
+  }, [activeTab]);
 
   return (
     <div>
@@ -146,7 +156,7 @@ const Projects = () => {
             GitHub Projects
           </button>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {activeTab === 'personal' ? (
             personalProjects.map((project, index) => (
