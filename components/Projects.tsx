@@ -69,24 +69,24 @@ const personalProjects: Project[] = [
     github: "https://github.com/i-m-Gaurav/Post.it",
     image: "/prompt.png"
   },
-  {
-    id: 7,
-    name: "design1",
-    description: "Modern Design frontend design with NextJS and Tailwind CSS equipped with modern ui components.",
-    technologies: ["Next.js", "Tailwind CSS", "TypeScript"],
-    link: "https://design1-gray.vercel.app/",
-    github: "https://github.com/i-m-Gaurav/design1",
-    image: "/design1.png"
-  },
-  {
-    id: 8,
-    name: "Dribble UI",
-    description: "Pixel-perfect recreation of Dribbble's home page, showcasing frontend skills and attention to detail.",
-    technologies: ["React", "Tailwind CSS", "TypeScript"],
-    link: "https://dribble-ivory.vercel.app/",
-    github: "https://github.com/i-m-Gaurav/Dribble",
-    image: "/dribble.png"
-  }
+  // {
+  //   id: 7,
+  //   name: "design1",
+  //   description: "Modern Design frontend design with NextJS and Tailwind CSS equipped with modern ui components.",
+  //   technologies: ["Next.js", "Tailwind CSS", "TypeScript"],
+  //   link: "https://design1-gray.vercel.app/",
+  //   github: "https://github.com/i-m-Gaurav/design1",
+  //   image: "/design1.png"
+  // },
+  // {
+  //   id: 8,
+  //   name: "Dribble UI",
+  //   description: "Pixel-perfect recreation of Dribbble's home page, showcasing frontend skills and attention to detail.",
+  //   technologies: ["React", "Tailwind CSS", "TypeScript"],
+  //   link: "https://dribble-ivory.vercel.app/",
+  //   github: "https://github.com/i-m-Gaurav/Dribble",
+  //   image: "/dribble.png"
+  // }
 ];
 
 const Projects = () => {
