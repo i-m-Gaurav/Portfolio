@@ -60,15 +60,15 @@ const personalProjects: Project[] = [
     github: "https://github.com/i-m-Gaurav/mars.github.io",
     image: "/cosmodrome.png"
   },
-  {
-    id: 6,
-    name: "Prompt Store",
-    description: "Secure, authenticated platform for sharing and discovering AI prompts, streamlining creativity across various needs.",
-    technologies: ["Next.js", "MongoDB", "OAuth"],
-    link: "https://post-it-umber.vercel.app/",
-    github: "https://github.com/i-m-Gaurav/Post.it",
-    image: "/prompt.png"
-  },
+  // {
+  //   id: 6,
+  //   name: "Prompt Store",
+  //   description: "Secure, authenticated platform for sharing and discovering AI prompts, streamlining creativity across various needs.",
+  //   technologies: ["Next.js", "MongoDB", "OAuth"],
+  //   link: "https://post-it-umber.vercel.app/",
+  //   github: "https://github.com/i-m-Gaurav/Post.it",
+  //   image: "/prompt.png"
+  // },
   // {
   //   id: 7,
   //   name: "design1",
