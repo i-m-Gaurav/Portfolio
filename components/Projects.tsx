@@ -60,6 +60,15 @@ const personalProjects: Project[] = [
     github: "https://github.com/i-m-Gaurav/mars.github.io",
     image: "/cosmodrome.png"
   },
+  {
+    id : 6,
+    name : "DevScope",
+    description : "DevScope is an innovative platform that utilizes AI to generate personalized assessments based on users' current skill sets and goals. By simply providing their information, users receive tailored assignments that help evaluate their skills and understanding effectively.",
+    technologies : ["NextJs","Google Gemini"],
+    link  : "https://dev-scope.vercel.app/",
+    github : "https://github.com/i-m-Gaurav/DevScope",
+    image : "/devscope.png"
+  }
   // {
   //   id: 6,
   //   name: "Prompt Store",
