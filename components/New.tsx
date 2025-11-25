@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 const New = () => {
   const { toast } = useToast();
@@ -271,7 +272,8 @@ const New = () => {
           <span className="italic">hire me</span> or just say hi.
         </p>
 
-        <form
+        <div className="flex">
+          <form
           onSubmit={handleSubmit}
           className="flex flex-col space-y-3 w-full max-w-xs"
         >
@@ -339,6 +341,10 @@ const New = () => {
             </Link>
           </div>
         </form>
+        <div className="flex justify-center items-center w-full">
+          <Image src = "mail.svg" width={100} height={100} alt="Mail Icon" />
+        </div>
+        </div>
       </section>
     </div>
   );
