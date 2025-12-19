@@ -23,7 +23,7 @@
     "gaurav": "file:",
     "lucide-react": "^0.475.0",
     "mini-svg-data-uri": "^1.4.4",
-    "next": "^15.1.6",
+    "next": "15.1.11",
     "octokit": "^4.1.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
