@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import { GitHubCalendar } from 'react-github-calendar';
 
 const New = () => {
   const { toast } = useToast();
@@ -82,7 +83,7 @@ const New = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto px-5 sm:px-6 py-10 text-white flex flex-col gap-10 text-pretty">
+    <div className="max-w-4xl mx-auto px-5 sm:px-6 py-10 text-white flex flex-col gap-10 text-pretty">
       {/* Intro */}
       <section className="space-y-2">
         <span className="text-xs italic">me,</span>
@@ -101,6 +102,11 @@ const New = () => {
           Resume
         </Link>
       </section>
+
+      <i>Some Activity...</i>
+
+      <GitHubCalendar username="i-m-Gaurav" />
+
 
       {/* Socials */}
       <section className="space-y-3 border-t border-gray-800 pt-6">
