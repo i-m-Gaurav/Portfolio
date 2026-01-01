@@ -148,9 +148,7 @@ const New = () => {
       {/* About */}
       <section className="space-y-3 border-t border-gray-800 pt-6">
         <p className="text-sm sm:text-base leading-relaxed text-gray-300">
-          I am a learner, always exploring something new, maybe I will learn
-          rocket science next week, just for fun. Currently, I’m on to web
-          technologies.
+          I am a learner, I love computers not from outside, but what i can do with this, its a small but a giant world for me. always exploring something new, i read books and cook good food too.
         </p>
       </section>
 
